@@ -1,11 +1,39 @@
-# Vue 3 + Typescript + Vite
+# i18n test
+base Vue 3 + Typescript + Vite
+i18n test
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 启用volar而不是vetur
+2.0 vetur
+3.x volar
 
-## Recommended IDE Setup
+本项目3.x，请关闭vetur，否则一堆报错。可以看下`.vscode/settings.json`
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## i18n
 
-## Type Support For `.vue` Imports in TS
+国际化地区编码对照表：https://xiaogliu.github.io/2019/10/11/i18n-locale-code/
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+需要VSCode插件[Lokalise.i18n-ally](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)
+
+最后应该是这样的
+
+![](https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/AHiX6u.jpg)
+
+可以通过修改`.vscode/settings.json`的`i18n-ally.sourceLanguage`切换编辑器的语言，比如设置
+
+```json
+{
+  ……
+  "i18n-ally.sourceLanguage": "zh",
+  ……
+}
+```
+
+![](https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/tyEZVL.jpg)
+
+## 机翻
+使用插件直接翻译到对应语言的文本出来
+
+![](https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/K6AYqV.jpg)
+
+会自动增加文本
+![](https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/mwiLoV.jpg)

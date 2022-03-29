@@ -8,3 +8,4 @@ header:
   title: '@:common.app@:common.name'
 message:
   hello: '{msg}世界'
+select: 选择语言

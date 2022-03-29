@@ -1,0 +1,9 @@
+common:
+  home: Tuis
+button:
+  toggle-language: Wissel Taal
+header:
+  title: '@:common.app @:common.name'
+select: Kies taal
+message:
+  hello: '{msg} wêreld'

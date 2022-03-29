@@ -12,21 +12,24 @@ const localPathPrefix = '../locales/'
 const messages = Object.fromEntries(
   Object.entries(import.meta.globEager('../locales/*.y(a)?ml')).map(
     ([key, value]) => {
+      console.log(`key`, `value`, key, value)
       const yaml = key.endsWith('.yaml')
       return [key.slice(localPathPrefix.length, yaml ? -5 : -4), value.default]
     }
   )
 )
 
+
 const install = (app: App) => {
+  // https://vue-i18n.intlify.dev/api/general.html#createi18n
   const i18n = createI18n({
-    legacy: false,
+    legacy: false, // 新模式
     locale,
     globalInjection: true,
     messages,
-  })
+  });
 
-  app.use(i18n)
+  app.use(i18n);
 }
 
 export default install

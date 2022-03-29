@@ -6,6 +6,10 @@
   <p>{{ $t('message.hello', { msg }) }}</p>
 
   <button type="button" @click="toggleLocales">{{ $t('button.toggle-language') }}</button>
+
+  <div>
+    <label for="pet-select">{{ $t('select')}}:</label>
+  </div>
 </template>
 
 <script setup lang="ts">
